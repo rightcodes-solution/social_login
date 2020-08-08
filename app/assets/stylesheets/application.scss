@@ -1,0 +1,100 @@
+@import "scss/bootstrap";
+
+/* style inputs and link buttons */
+.authentication {
+
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+
+  .connected{
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  td,tr,th{
+    text-align: center;
+  }
+
+  .btn-custom {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #858280;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .social {
+    width: 15.50%;
+    text-align: center;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  input:hover,
+  .btn-custom,.btn:hover {
+    opacity: 1;
+  }
+
+  .submit {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  .submit:hover {
+    background-color: #45a049;
+  }
+
+  /* add appropriate colors to social buttons */
+  .facebook {
+    background-color: #3B5998;
+    color: white;
+  }
+
+  .twitter {
+    background-color: rgba(29,161,242,1.00);
+    color: white;
+  }
+
+  .google_oauth2 {
+    background-color: #dd4b39;
+    color: white;
+  }
+
+  .github {
+    background-color: #24292e;
+    color: white;
+  }
+
+  .linkedin {
+    background-color: #0077b5;
+    color: white;
+  }
+
+  .instagram_graph {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+    color: white;
+  }
+
+}

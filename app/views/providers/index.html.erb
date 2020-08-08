@@ -1,0 +1,40 @@
+<div class="authentication">
+  <div class="row">
+    <%= link_to 'Connect with Facebook', user_facebook_omniauth_authorize_path, class: "social facebook" %> &nbsp
+    <%= link_to 'Connect with Google', user_google_oauth2_omniauth_authorize_path, class: "social google_oauth2" %> &nbsp
+    <%= link_to 'Connect with Twitter', user_twitter_omniauth_authorize_path, class: "twitter social" %>&nbsp
+    <%= link_to 'Connect with GitHub', user_github_omniauth_authorize_path, class: "github social" %>&nbsp
+    <%= link_to 'Connect with LinkedIn', user_linkedin_omniauth_authorize_path, class: "linkedin social" %>&nbsp
+    <%= link_to 'Connect with Instagram', user_instagram_graph_omniauth_authorize_path, class: "instagram_graph social" %>
+  </div>
+  <br><br>
+  <% if @providers.present? %>
+    <h1>Authorized accounts</h1> <br>
+    <div class="table-responsive-sm">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Sl</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <% @number = 1 %>
+        <% @providers.each do |provider| %>
+          <tr>
+            <td><%= @number %> </td>
+            <% @number += 1 %>
+            <td class="<%= provider.name %>"><%= provider.name %></td>
+            <td><%= provider.email %></td>
+            <td>
+              <%= link_to "Disconnect", provider_path(provider), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+
+</div>
+

@@ -1,0 +1,13 @@
+<div id="error_msg">
+  <% if resource.errors.any? %>
+    <% resource.errors.full_messages.each do |message| %>
+      <p class="alert alert-danger"> <%= message if resource.errors.full_messages.first == message %> </p>
+    <% break end %>
+  <% end %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  setTimeout(function () {
+    $('#error_msg').slideUp('slow');
+  }, 3000);
+</script>
